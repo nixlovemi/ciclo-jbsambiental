@@ -1,0 +1,433 @@
+{% extends "page.html" %}
+{% load static %}
+
+{% block title %}Produtos{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/produtos-v4.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="banner-section">
+  <div class="banner-content">
+    <div class="container">
+      <div class="banner-titulo">
+        Nossos<br class="visible-gt-767" />
+        <strong>Produtos</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="producao-section">
+  <div class="container">
+    <div class="producao-titulo-col col-md-5 col-sm-12">
+      <div class="producao-titulo">
+        Processos de <br class="visible-gt-991" />
+        <strong>Produ&ccedil;&atilde;o</strong> na <br class="visible-gt-991" />
+        F&aacute;brica da Matriz <br class="visible-gt-991" />
+        em <strong>Lins/SP</strong>
+      </div>
+      <div class="producao-texto">
+        A matriz da <strong>JBS Ambiental</strong> é responsável por toda a cadeia de <br class="visible-gt-1199" />
+        reciclagem do plástico. Isso engloba o recebimento de produtos <br class="visible-gt-1199" />
+        plásticos pós indústria realizado pelas suas filiais e também pela <br class="visible-gt-1199" />
+        própria matriz. O reprocesso se dá através da lavagem e trituração <br class="visible-gt-1199" />
+        destes produtos, aglutinação para tornar o material mais denso e <br class="visible-gt-1199" />
+        capaz de passar por um processo que, &agrave; base de temperatura e <br class="visible-gt-1199" />
+        pressão, transforma estes pequenos flakes em resina. Esta resina <br class="visible-gt-1199" />
+        reciclada, já em formato de grãos, passa por outro processo físico, <br class="visible-gt-1199" />
+        e é transformada em filme plástico, dando origem, por exemplo, <br class="visible-gt-1199" />
+        aos sacos de lixo. <br />
+        <br />
+        Além disso, a <strong>matriz</strong> também produz embalagens plásticas para <br class="visible-gt-1199" />
+        alimentos, em forma de bobinas e sacos, utilizando <strong>matéria-prima <br class="visible-gt-1199" />
+        virgem</strong>. <br />
+        <br />
+        Com relação a outros resíduos que não reciclamos internamente, <br class="visible-gt-1199" />
+        como o papelão, por exemplo, cuidamos de dar a estes o destino <br class="visible-gt-1199" />
+        correto após prensagem. <br />
+        <br />
+        Contamos com <strong>equipamentos modernos</strong>, colaboradores treinados <br class="visible-gt-1199" />
+        e <strong>muita tecnologia</strong> em nossos processos produtivos, que nos <br class="visible-gt-1199" />
+        permitem fornecer os melhores produtos e garantir <br class="visible-gt-1199" />
+        a <strong>sustentabilidade</strong>. <br />
+      </div>
+    </div>
+    <div class="producao-destaque-col col-md-1 col-sm-12">
+      <div class="producao-destaque visible-gt-991">&nbsp;</div>
+    </div>
+    <div class="producao-imagem-col producao-imagem col-md-6 col-sm-12 zoomable">
+      <img src="{% static 'img/produtos/producao.png' %}" width="100%" alt="Sustentável">
+    </div>
+  </div>
+</div>
+
+<div class="industria-section">
+  <div class="container">
+    <div class="industria-texto-col col-md-3 col-sm-6">
+      <div class="industria-texto-titulo">
+        Produtos <br class="visible-gt-767" />
+        para a <strong>indústria</strong> <br class="visible-gt-767" />
+        <strong>Alimentícia</strong>
+      </div>
+      <div class="industria-texto-corpo">
+        Produtos plásticos de <strong>polietileno</strong>
+        <strong>monocamada</strong> procedentes de resinas
+        virgens, especialmente produzidos
+        para <strong>contato com alimentos</strong>.
+      </div>
+    </div>
+    <div class="industria-bg-col col-md-3 col-sm-6">
+      <div class="industria-bg-titulo">
+        Sacos para <br class="visible-gt-767" />
+        alimentos <br class="visible-gt-767" />
+        in natura <br class="visible-gt-767" />
+      </div>
+      <div class="industria-bg-linha">
+      </div>
+      <div class="industria-bg-corpo">
+        Embalagens primárias para
+        armazenar <strong>diversos tipos</strong>
+        <strong>de alimentos</strong>, como carnes
+        in natura, frutas, verduras,
+        dentre outros.
+      </div>
+      <img src="{% static 'img/produtos/industria-destaque.png' %}" class="industria-imagem-destaque" alt="Destaque">
+    </div>
+    <div class="industria-imagem-col col-md-6 col-sm-12 zoomable">
+      <img src="{% static 'img/produtos/industria-principal.png' %}" class="industria-imagem-principal" alt="Principal">
+    </div>
+  </div>
+</div>
+
+<div class="bobinas-section">
+  <div class="container">
+    <div class="bobinas-imagem-col col-md-6 col-sm-12 visible-gt-991 zoomable">
+      <img src="{% static 'img/produtos/bobinas-principal.png' %}" class="bobinas-imagem-principal" alt="Principal">
+    </div>
+    <div class="bobinas-bg-col col-md-3 col-sm-6">
+      <div class="bobinas-bg-titulo">
+        Bobinas e folhas <br class="visible-gt-767" />
+        avulsas
+      </div>
+      <div class="bobinas-bg-linha">
+      </div>
+      <div class="bobinas-bg-corpo">
+        Embalagem primária para
+        armazenar diversos tipos de
+        alimentos, <strong>ideal</strong> para
+        <strong>separação</strong> e <strong>proteção</strong>
+        de produtos.
+      </div>
+    </div>
+    <div class="bobinas-texto-col col-md-3 col-sm-6">
+      <img src="{% static 'img/produtos/bobinas-destaque.png' %}" class="bobinas-imagem-destaque" alt="Destaque">
+    </div>
+    <div class="bobinas-imagem-col col-md-6 col-sm-12 visible-lt-991">
+      <img src="{% static 'img/produtos/bobinas-principal.png' %}" class="bobinas-imagem-principal" alt="Principal">
+    </div>
+  </div>
+</div>
+
+<div class="sacos-section">
+  <div class="container">
+    <div class="sacos-texto-col col-md-3 col-sm-6 sacos-texto-col-medium">
+      &nbsp;
+    </div>
+    <div class="sacos-bg-col col-md-3 col-sm-12 col-xs-12">
+      <div class="sacos-bg-titulo">
+        Sacos <br class="visible-gt-767" />
+        especiais <br class="visible-gt-767" />
+      </div>
+      <div class="sacos-bg-linha">
+      </div>
+      <div class="sacos-bg-corpo">
+        Embalagens primárias e <br class="visible-gt-991" />
+        secundárias para forrar <br class="visible-gt-991" />
+        cestos, contêineres e <br class="visible-gt-991" />
+        tambores, preservando <br class="visible-gt-991" />
+        a <strong>qualidade</strong> dos <br class="visible-gt-991" />
+        produtos na <br class="visible-gt-991" />
+        armazenagem e <br class="visible-gt-991" />
+        no transporte.
+      </div>
+      <img src="{% static 'img/produtos/sacos-destaque.png' %}" class="sacos-imagem-destaque" alt="Destaque">
+    </div>
+    <div class="sacos-imagem-col col-md-6 col-sm-12 zoomable">
+      <img src="{% static 'img/produtos/sacos-principal.png' %}" class="sacos-imagem-principal" alt="Principal">
+    </div>
+  </div>
+</div>
+
+<div class="redondo-section">
+  <div class="container">
+    <div class="redondo-imagem-col col-md-6 col-sm-12 visible-gt-991 zoomable">
+      <img src="{% static 'img/produtos/redondo-principal.png' %}" class="redondo-imagem-principal" alt="Principal">
+    </div>
+    <div class="redondo-bg-col col-md-3 col-sm-6">
+      <div class="redondo-bg-titulo">
+        Sacos plásticos <br class="visible-gt-767" />
+        de fundo <br class="visible-gt-767" />
+        redondo
+      </div>
+      <div class="redondo-bg-linha">
+      </div>
+      <div class="redondo-bg-corpo">
+        Embalagens primárias,
+        desenvolvidas para contato
+        com alimentos e <strong>personalizadas</strong>
+        para diversas geometrias
+        de produtos.
+      </div>
+    </div>
+    <div class="redondo-texto-col col-md-3 col-sm-6">
+      <img src="{% static 'img/produtos/redondo-destaque.png' %}" class="redondo-imagem-destaque" alt="Destaque">
+    </div>
+    <div class="redondo-imagem-col col-md-6 col-sm-12 visible-lt-991">
+      <img src="{% static 'img/produtos/redondo-principal.png' %}" class="redondo-imagem-principal" alt="Principal">
+    </div>
+  </div>
+</div>
+
+<div class="ciclo-section">
+  <div class="container">
+    <div class="ciclo-texto-col col-md-6 col-sm-6">
+      <div class="ciclo-texto-titulo">
+        Produtos desenvolvidos <br class="visible-gt-767" />
+        Com o conceito <br class="visible-gt-767" />
+        de <strong>Ciclo Fechado</strong>, <br class="visible-gt-767" />
+        que compõe a <br class="visible-gt-767" />
+        <strong>economia circular </strong>
+      </div>
+    </div>
+    <div class="ciclo-imagem-col col-md-6 col-sm-6">
+      <img src="{% static 'img/produtos/ciclo.png' %}" class="ciclo-imagem" alt="Principal">
+    </div>
+  </div>
+</div>
+
+<div class="produtos-section">
+  <div class="container">
+    <!-- produto 1 -->
+    <div class="produtos-col produtos-col-odd col-md-6 col-sm-12">
+      <div class="produtos-titulo produtos-titulo-1">
+        Sacos de <strong>Lixo</strong>
+      </div>
+      <div class="produtos-texto produtos-texto-1">
+        Sacos de alta resistência, para descarte <br />
+        de materiais industriais. <br />
+        <strong>Materiais:</strong> Polietileno reciclado em diversas cores. <br />
+        <strong>Tamanhos:</strong> 30, 50, 100, 150, 200, 400 e 450 litros.
+      </div>
+      <div class="produtos-imagem-div">
+        <img src="{% static 'img/produtos/produtos-1.png' %}" class="produtos-imagem produtos-imagem-1" alt="Produto">
+      </div>
+      <div class="produtos-destaque-div">
+        <img src="{% static 'img/produtos/produtos-destaque.png' %}" class="produtos-destaque produtos-destaque-1" alt="Destaque">
+      </div>
+    </div>
+    <!-- produto 2 -->
+    <div class="produtos-col col-md-6 col-sm-12">
+      <div class="produtos-titulo produtos-titulo-2">
+        <strong>Sacos</strong> <br />
+        Reciclados
+      </div>
+      <div class="produtos-texto produtos-texto-2">
+        De uso comercial, confeccionados de acordo com <br />
+        as especificações que o seu negócio precisa. <br />
+        <strong>Materiais:</strong> Polietileno reciclado em diversas cores. <br />
+        <strong>Tamanhos:</strong> Variável de acordo com cada necessidade.
+      </div>
+      <div class="produtos-imagem-div">
+        <img src="{% static 'img/produtos/produtos-2.png' %}" class="produtos-imagem produtos-imagem-2" alt="Produto">
+      </div>
+      <div class="produtos-destaque-div">
+        <img src="{% static 'img/produtos/produtos-destaque.png' %}" class="produtos-destaque produtos-destaque-2" alt="Destaque">
+      </div>
+    </div>
+    <!-- produto 3 -->
+    <div class="produtos-col produtos-col-odd col-md-6 col-sm-12">
+      <div class="produtos-titulo produtos-titulo-3">
+        <strong>Lonas</strong>
+      </div>
+      <div class="produtos-texto produtos-texto-3">
+        Alta resistência e sustentabilidade <br />
+        para proteção, sustentação e <br />
+        impermeabilização de materiais. <br />
+        <strong>Materiais:</strong> Polietileno de alta <br /> resistência.<br />
+        <strong>Cores:</strong> Azul e preto (Bainhas com <br /> acabamento vulcanizado).<br />
+        <strong>Vantagem:</strong> Alta resistência.
+      </div>
+      <div class="produtos-imagem-div">
+        <img src="{% static 'img/produtos/produtos-3.png' %}" class="produtos-imagem produtos-imagem-3" alt="Produto">
+      </div>
+      <div class="produtos-destaque-div">
+        <img src="{% static 'img/produtos/produtos-destaque.png' %}" class="produtos-destaque produtos-destaque-3" alt="Destaque">
+      </div>
+    </div>
+    <!-- produto 4 -->
+    <div class="produtos-col col-md-6 col-sm-12">
+      <div class="produtos-titulo produtos-titulo-4">
+        <strong>Gaiolas injetadas</strong> <br />
+        Sustentáveis para <br />
+        transporte de <br />
+        frangos
+      </div>
+      <div class="produtos-texto produtos-texto-4">
+        Fabricados em PE com o conceito <strong>sustentável</strong> <br />
+        atendendo as normas vigentes de bem estar <br />
+        animal.
+      </div>
+      <div class="produtos-imagem-div">
+        <img src="{% static 'img/produtos/produtos-4.png' %}" class="produtos-imagem produtos-imagem-4" alt="Produto">
+      </div>
+      <div class="produtos-destaque-div">
+        <img src="{% static 'img/produtos/produtos-destaque.png' %}" class="produtos-destaque produtos-destaque-4" alt="Destaque">
+      </div>
+    </div>
+    <!-- produto 5 -->
+    <div class="produtos-col produtos-col-odd col-md-6 col-sm-12">
+      <div class="produtos-titulo produtos-titulo-5">
+        <strong>Capas protetoras</strong> <br />
+        de palete
+      </div>
+      <div class="produtos-texto produtos-texto-5">
+        Capas e bandejas de plástico que proporcionam <br />
+        melhor proteção, armazenagem e transporte de <br />
+        produtos em paletes. <br />
+        <strong>Tamanhos e cores:</strong> Variável de acordo com cada necessidade.
+      </div>
+      <div class="produtos-imagem-div">
+        <img src="{% static 'img/produtos/produtos-5.png' %}" class="produtos-imagem produtos-imagem-5" alt="Produto">
+      </div>
+      <div class="produtos-destaque-div">
+        <img src="{% static 'img/produtos/produtos-destaque.png' %}" class="produtos-destaque produtos-destaque-5" alt="Destaque">
+      </div>
+    </div>
+    <!-- produto 6 -->
+    <div class="produtos-col col-md-6 col-sm-12">
+      <div class="produtos-titulo produtos-titulo-6">
+        <strong>Shrink</strong>
+      </div>
+      <div class="produtos-texto produtos-texto-6">
+        Filme plástico encolhível de <strong>alta</strong> <br />
+        <strong>aderência</strong>, utilizada para unificar <br />
+        e proteger os produtos, criando <br />
+        um <strong>lacre anti-violação</strong>.
+      </div>
+      <div class="produtos-imagem-div">
+        <img src="{% static 'img/produtos/produtos-6.png' %}" class="produtos-imagem produtos-imagem-6" alt="Produto">
+      </div>
+      <div class="produtos-destaque-div">
+        <img src="{% static 'img/produtos/produtos-destaque.png' %}" class="produtos-destaque produtos-destaque-6" alt="Destaque">
+      </div>
+    </div>
+    <!-- produto 7 -->
+    <div class="produtos-col produtos-col-odd col-md-6 col-sm-12">
+      <div class="produtos-titulo produtos-titulo-7">
+        <strong>Stretch</strong>
+      </div>
+      <div class="produtos-texto produtos-texto-7">
+        Stretch de <strong>alta performance</strong> para <br />
+        aplicação manual ou automática em <br />
+        paletização, garantindo <strong>segurança</strong> no <br />
+        transporte e armazenamento de <br />
+        cargas.
+      </div>
+      <div class="produtos-imagem-div">
+        <img src="{% static 'img/produtos/produtos-7.png' %}" class="produtos-imagem produtos-imagem-7" alt="Produto">
+      </div>
+      <div class="produtos-destaque-div">
+        <img src="{% static 'img/produtos/produtos-destaque.png' %}" class="produtos-destaque produtos-destaque-7" alt="Destaque">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outros-section">
+  <div class="container">
+    <!-- outro 1 -->
+    <div class="outros-col outros-col-odd col-md-4 col-sm-6">
+      <div class="outros-titulo outros-titulo-1">
+        <strong>Estrados</strong> plásticos <br />
+        Reciclados
+      </div>
+      <div class="outros-texto outros-texto-1">
+        Fabricados em PP ou PE reciclado, desenvolvidos
+        <strong>sob medida</strong> e que contribui com as boas práticas
+        de fabricação, evitando contato direto entre
+        partes.
+      </div>
+      <div class="outros-imagem-div outros-imagem-div-1">
+        <img src="{% static 'img/produtos/outros-1.png' %}" class="outros-imagem outros-imagem-1" alt="Produto">
+      </div>
+    </div>
+    <!-- outro 2 -->
+    <div class="outros-col outros-col-odd col-md-4 col-sm-6">
+      <div class="outros-titulo outros-titulo-2">
+        Paletes plásticos <br />
+        <strong>Retornáveis</strong>
+      </div>
+      <div class="outros-texto outros-texto-2">
+        Fabricados em PP ou PE reciclado, é uma <strong>solução</strong>
+        <strong>sustentável</strong> que viabiliza a logística eliminando a
+        geração de resíduos de madeira, tradicionais em
+        paletes PBR.
+      </div>
+      <div class="outros-imagem-div outros-imagem-div-2">
+        <img src="{% static 'img/produtos/outros-2.png' %}" class="outros-imagem outros-imagem-2" alt="Produto">
+      </div>
+    </div>
+    <!-- outro 3 -->
+    <div class="outros-col outros-col-odd col-md-4 col-sm-6">
+      <div class="outros-titulo outros-titulo-3">
+        <strong>Paletes</strong> e perfis de <br />
+        madeira plástica WPC <br />
+      </div>
+      <div class="outros-sub-titulo outros-sub-titulo-3">
+        (wood-plastic composite)
+      </div>
+      <div class="outros-texto outros-texto-3">
+        Fabricados <strong>a partir de resíduos complexos para</strong>
+        <strong>reciclagem</strong>, antes destinados para aterro sanitário. <br />
+        Com essa linha de produtos é possível transformar
+        os resíduos plásticos em produtos e retorná-los
+        para as operações industriais.
+      </div>
+      <div class="outros-imagem-div outros-imagem-div-3">
+        <img src="{% static 'img/produtos/outros-3.png' %}" class="outros-imagem outros-imagem-3" alt="Produto">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="resinas-section">
+  <div class="container">
+    <div class="resinas-col resinas-col-1 col-md-6 col-sm-6 col-xs-6">
+      <div class="resinas-texto resinas-texto-1">
+        Linhas de produtos <br />
+        plásticos reciclados com <br />
+        procedência garantida e <br />
+        <strong>alto padrão de qualidade</strong> <br />
+        retornando
+      </div>
+    </div>
+    <div class="resinas-col resinas-col-2 col-md-6 col-sm-6 col-xs-6">
+      <div class="resinas-titulo resinas-titulo-2">
+        Resinas <br />
+        (PEAD, PEBD e PP)
+      </div>
+      <div class="resinas-texto resinas-texto-2">
+        Produzidas a partir de resíduos plásticos, possuem  <br class="visible-gt-767" />
+        alta empregabilidade em diversos processos <br class="visible-gt-767" />
+        industriais. <br />
+        <strong>Aplicações:</strong> Moldagem para injeção ou sopro e <br class="visible-gt-767" />
+        extrusão de filme.
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

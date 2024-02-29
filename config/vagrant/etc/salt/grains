@@ -1,0 +1,71 @@
+roles:
+  - db
+  - salt_master
+  - frontend
+  - frontend_http
+#  - frontend_certbot
+#  - frontend_https
+
+db:
+  - mysql_version: 5.7.32
+  - mysql_root_password: XtvRjJMSdv3dLhA2
+  - mysql_database: ambiental
+  - mysql_user: ambientalappuser
+  - mysql_password: AXTnUGeg7sJjeGv8
+
+frontend:
+  - image: local/frontend:1.0.0.0
+  - source_dir: /git/frontend
+  - port_bindings:
+    - 8001:8000
+  - environment:
+    - DJANGO_DEBUG=false
+    - DJANGO_SECRET_KEY="?+5*9Ly7CpSm7mk!k#$vnzYJ8&-cY6z!_+Mk6wxk?_P^MQnq3K"
+    - DJANGO_ALLOWED_HOSTS=127.0.0.1,172.10.100.110,backend
+    - DJANGO_STATIC_ROOT=/usr/src/frontend/webapp/static/
+    - DJANGO_MEDIA_ROOT=/var/www/frontend/webapp/media/
+    - DJANGO_LOG_FILENAME=/var/log/frontend/frontend.log
+    - DJANGO_LOG_LEVEL=INFO
+    - DJANGO_LOG_HANDLER=logfile
+    - MYSQL_HOST=172.17.0.1
+    - MYSQL_DB=ambiental
+    - MYSQL_PORT=3306
+    - MYSQL_USER=ambientalappuser
+    - MYSQL_PASSWD=AXTnUGeg7sJjeGv8
+    - LOG_LEVEL=INFO
+    - GTM_CODE=GTM-M7NWCNS
+    - EMAIL_HOST=in-v3.mailjet.com
+    - EMAIL_PORT=587
+    - EMAIL_HOST_USER=21ea3371a359b90be09c731c36bd2547
+    - EMAIL_HOST_PASSWORD=583a3b5846f85cd3364e8df4c8e39448
+    - EMAIL_USE_TLS=true
+    - EMAIL_USE_SSL=false
+    - EMAIL_FROM=uboi.contato@gmail.com
+    - EMAIL_TO=henrique@ciclocomunicacao.com.br
+
+frontend_http:
+  - nginx_version: 1.21.6
+  - backend: 172.17.0.1:8001
+  - unsecured_host_headers:
+    -  jbsambiental.unsecured.local
+    -  www.jbsambiental.unsecured.local
+  - secured_host_headers:
+    -  jbsambiental.secured.local
+    -  www.jbsambiental.secured.local
+  - secure_host_header: jbsambiental.local
+  - static_dir: /git/frontend/webapp/static/
+
+frontend_https:
+  - nginx_version: 1.21.6
+  - backend: 172.17.0.1:8001
+  - secure_host_headers:
+    -  jbsambiental.local
+    -  www.jbsambiental.local
+  - static_dir: /git/frontend/webapp/static/
+
+frontend_certbot:
+  - image: certbot/certbot:amd64-v1.7.0
+  - secure_host_headers:
+    -  jbsambiental2.ciclocomunicacao.com.br
+    -  www-jbsambiental2.ciclocomunicacao.com.br
+  - email: henrique@ciclocomunicacao.com.br

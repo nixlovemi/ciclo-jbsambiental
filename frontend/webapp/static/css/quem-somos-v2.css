@@ -1,0 +1,411 @@
+/* banner */
+.banner-section {
+  background-image: url("../img/quem-somos/banner.png");
+  background-size: 100%;
+  height: 27vw;
+}
+
+.banner-titulo {
+  font-size: 32px;
+  font-family: 'Gotham';
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+@media (max-width: 1199px) {
+  .banner-section {
+    background-size: 130%;
+    height: 36vw;
+  }
+  .banner-titulo {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner-section {
+    background-size: 130%;
+    height: 36vw;
+  }
+  .banner-titulo {
+    font-size: 20px;
+  }
+}
+
+/* negocios */
+.negocios-section {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.negocio-titulo-col {
+  padding-top: 30px;
+}
+
+.negocio-titulo {
+  font-size: 24px;
+  font-family: 'Gotham';
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #2d7700;
+}
+
+.negocio-texto {
+  color: #2d7700;
+  font-size: 13px;
+  font-family: 'Gotham';
+  font-weight: 100;
+}
+
+.negocio-destaque-col {
+  float: left;
+}
+
+.negocio-destaque {
+  width: 40px;
+  height: 300px;
+  background-color: #4374ff;
+  position: relative;
+  top: -20px;
+  z-index: 1000;
+}
+
+.negocio-imagem {
+  position: relative;
+  top: 20px;
+  left: -35px;
+  width: 55%;
+}
+.negocio-titulo {
+  clear: left;
+}
+
+@media (max-width: 1199px) {
+  .negocio-titulo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .negocio-imagem {
+    width: 100%;
+    position: inherit;
+    left: 0%;
+    padding-top: 10px;
+  }
+}
+
+/* grupo */
+.grupo-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #eeeeee;
+}
+
+.grupo-texto {
+  color: #2d7700;
+  font-size: 13px;
+  font-family: 'Gotham';
+  font-weight: 100;
+  padding-bottom: 40px;
+  margin-left: 40px;
+}
+
+.grupo-destaque {
+  position: relative;
+  top: -100px;
+  margin-bottom: -100px;
+}
+
+.grupo-link {
+  width: fit-content;
+  font-size: 13px;
+  padding: 8px;
+  background-color: #1ea100;
+  color: #ffffff;
+  margin-left: 40px;
+}
+
+.grupo-imagem-col {
+  padding-top: 30px;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .grupo-destaque {
+    display: none;
+  }
+}
+
+/* institucional */
+.institucional-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.institucional-titulo {
+  font-size: 24px;
+  font-family: 'Gotham';
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #2d7700;
+  padding-top: 20px;
+}
+
+.institucional-texto {
+  color: #2d7700;
+  font-size: 13px;
+  font-family: 'Gotham';
+  font-weight: 100;
+}
+
+.institucional-visao-ul {
+  padding-top: 20px;
+  padding-inline-start: 0px;
+}
+
+.institucional-visao-ul>li {
+  list-style: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+  white-space: pre-wrap;
+}
+
+.institucional-visao-ul>li::before{
+  content: " ";
+  display: block;
+  font-size: 13px;
+  height: 23px !important;
+  padding-right: 35px !important;
+  background-image: url("../img/bullet.png");
+  background-size: 16px !important;
+  background-repeat: no-repeat;
+}
+
+/* core */
+.core-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #eeeeee;
+}
+
+.core-texto {
+  color: #2d7700;
+  font-size: 14px;
+  font-family: 'Gotham';
+  font-weight: 100;
+  padding-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.core-imagem-col {
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* certificacoes */
+.certificacoes-section {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.certificacoes-titulo-selo {
+  float: left;
+}
+
+.certificacoes-titulo-selo-img {
+  width: 100px;
+  height: 100px;
+}
+
+.certificacoes-titulo-destaque {
+  border-bottom: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #1ea100;
+  width: 100px;
+  position: relative;
+  top: -50px;
+  left: 100px;
+}
+
+.certificacoes-titulo-texto {
+  float: left;
+  color: #2d7700;
+  font-size: 16px;
+  font-family: 'Gotham';
+  font-weight: 100;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.certificacoes-imagem {
+  text-align: center;
+  clear: left;
+}
+
+@media (max-width: 991px) {
+  .certificacoes-titulo-texto {
+    padding-top: 0px;
+  }
+  .certificacoes-titulo-selo-img {
+    width: 60px;
+    height: 60px;
+  }
+  .certificacoes-titulo-destaque {
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #1ea100;
+    width: 60px;
+    position: relative;
+    top: -30px;
+    left: 60px;
+  }
+  .certificacoes-imagem > img {
+    width: 80%;
+  }
+}
+
+/* legislacao */
+.legislacao-section {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  background-color: #eeeeee;
+}
+
+.legislacao-titulo-selo {
+  float: left;
+}
+
+.legislacao-titulo-selo-img {
+  width: 100px;
+  height: 100px;
+}
+
+.legislacao-titulo-destaque {
+  border-bottom: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #1ea100;
+  width: 100px;
+  position: relative;
+  top: -50px;
+  left: 100px;
+}
+
+.legislacao-titulo-texto {
+  float: left;
+  color: #2d7700;
+  font-size: 16px;
+  font-family: 'Gotham';
+  font-weight: 100;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.legislacao-ul {
+  padding-top: 20px;
+  padding-inline-start: 0px;
+}
+
+.legislacao-ul>li {
+  list-style: none;
+}
+
+.legislacao-ul>li::before{
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  background-image: url("../img/bullet.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.legislacao-bullets-col {
+  color: #2d7700;
+  font-size: 13px;
+  font-family: 'Gotham';
+  font-weight: 100;
+}
+
+.legislacao-pontos-col {
+  color: #2d7700;
+  font-size: 13px;
+  font-family: 'Gotham';
+  font-weight: 100;
+}
+
+.legislacao-aviso-col {
+  text-align: center;
+}
+
+.legislacao-aviso {
+  font-family: 'Gotham';
+  font-weight: 100;
+  width: fit-content;
+  font-size: 13px;
+  padding: 6px;
+  background-color: #1ea100;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.legislacao-bullets-col {
+  clear: left;
+}
+
+@media (max-width: 991px) {
+  .legislacao-titulo-texto {
+    padding-top: 0px;
+  }
+  .legislacao-titulo-selo-img {
+    width: 60px;
+    height: 60px;
+  }
+  .legislacao-titulo-destaque {
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #1ea100;
+    width: 60px;
+    position: relative;
+    top: -30px;
+    left: 60px;
+  }
+  .legislacao-imagem > img {
+    width: 80%;
+  }
+}
+
+/* mensagem */
+.mensagem-section {
+  margin-top: -100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eeeeee;
+  margin-bottom: 40px;
+}
+
+.mensagem-texto-col {
+  font-family: 'Gotham';
+  font-weight: 100;
+  font-size: 13px;
+  padding: 6px;
+  color: #2d7700;
+}
+
+.mensagem-left-quote-col {
+  font-family: 'Gotham';
+  font-weight: 800;
+  font-size: 48px;
+  color: #2d7700;
+}
+
+.mensagem-right-quote-col {
+  font-family: 'Gotham';
+  font-weight: 800;
+  font-size: 48px;
+  color: #2d7700;
+  text-align: right;
+}

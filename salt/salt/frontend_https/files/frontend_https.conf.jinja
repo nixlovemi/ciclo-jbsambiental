@@ -1,0 +1,49 @@
+upstream backend {
+  server {{ backend }};
+}
+
+{% for secure_host_header in secure_host_headers %}
+# secure proxy
+server {
+  listen 8443 ssl http2; # cannot be 443, not running as root (mapped on container)
+  server_name {{ secure_host_header }};
+
+  ssl_certificate /etc/letsencrypt/live/{{ secure_host_header }}/fullchain.pem; # managed by Certbot
+  ssl_certificate_key /etc/letsencrypt/live/{{ secure_host_header }}/privkey.pem; # managed by Certbot
+
+  # letscrypt
+  # https://github.com/certbot/certbot/blob/master/certbot-nginx/certbot_nginx/_internal/tls_configs/options-ssl-nginx.conf
+  ssl_session_cache shared:le_nginx_SSL:10m;
+  ssl_session_timeout 1440m;
+  ssl_session_tickets off;
+  ssl_protocols TLSv1.2 TLSv1.3;
+  ssl_prefer_server_ciphers off;
+  ssl_ciphers "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384";
+
+  {% if enable_hsts %}
+  # HSTS
+  add_header Strict-Transport-Security "max-age=63072000; includeSubdomains;";
+  {% endif %}
+
+  location /.well-known/acme-challenge/ {
+    root /var/www/certbot;
+  }
+
+  location = /ping {
+    empty_gif;
+  }
+
+  location /static/ {
+    root /var/www/frontend/webapp;
+  }
+
+  location /media/ {
+    root /var/www/frontend/webapp;
+  }
+
+  location / {
+    proxy_pass http://backend;
+  }
+}
+
+{% endfor %}

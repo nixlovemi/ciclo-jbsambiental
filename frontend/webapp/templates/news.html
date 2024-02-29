@@ -1,0 +1,103 @@
+{% extends "page.html" %}
+{% load static %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block meta %}
+<meta property="og:url"           content="/news/{{ post.slug }}" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="JBS Ambiental | {{ post.title }}" />
+<meta property="og:description"   content="{{ post.sub_title }}" />
+<meta property="og:image"         content="{{ post.header_image.url }}" />
+{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/news-v1.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="banner-section">
+  <div class="banner-content">
+    <div class="container">
+      <div class="banner-titulo">
+        Confira Nosso <br />
+        <strong>Conte&uacute;do exclusivo</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="imagem-section" style="background-image: url('{{ post.header_image.url }}');">
+</div>
+
+<!-- noticia -->
+<div class="noticia-section">
+  <div class="container">
+    <div class="noticia-text col-md-12 col-sm-12 col-xs-12">
+      <div class="noticia-text-title">
+        <strong>{{ post.title }}</strong>
+      </div>
+      <div class="noticia-text-sub-title">
+        {{ post.created_on|date:"DATE_FORMAT" }}
+      </div>
+      <div class="noticia-text-text">
+        {{ post.content|safe }}
+      </div>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <br />
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- Your share button code -->
+    <div class="fb-share-button"
+      data-href="https://www.jbsambiental.com.br/news/{{ post.slug }}"
+      data-layout="button">
+    </div>
+    &nbsp; &nbsp;
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: pt_BR</script>
+    <script type="IN/Share" data-url="https://www.jbsambiental.com.br/news/{{ post.slug }}"></script>
+    </div>
+  </div>
+</div>
+
+<!-- veja -->
+<div class="veja-section">
+  <div class="container">
+    <div class="veja-titulo-col col-md-12 col-sm-12">
+      <div class="veja-titulo">
+        Veja <strong>tamb&eacute;m</strong>
+      </div>
+    </div>
+    {% for other_post in other_posts %}
+    <div class="col-md-3 col-sm-6">
+      <div class="veja-item-col">
+        <div class="veja-item-titulo">
+          {{ other_post.title }}
+        </div>
+        <div class="veja-item-separator"></div>
+        <div class="veja-item-text">
+          {{ other_post.sub_title }}
+        </div>
+        <div class="veja-mais-botao-linha">
+          <div class="veja-mais-botao">
+            <a href="/news/{{ other_post.slug }}">
+              Leia mais
+              <img src="{% static 'img/right-white.png' %}" width="9px" height="16px" alt="Link">
+            </a>
+          </div>
+        </div>
+        <div class="veja-mais-imagem" style="background-image: url('{{ other_post.header_image.url }}');">
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

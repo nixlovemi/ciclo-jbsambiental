@@ -1,0 +1,161 @@
+/* banner */
+.banner-section {
+  background-image: url("../img/news/banner.png");
+  background-size: 100%;
+  height: 27vw;
+}
+
+.banner-titulo {
+  font-size: 32px;
+  font-family: 'Gotham';
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+@media (max-width: 1199px) {
+  .banner-section {
+    background-size: 130%;
+    height: 36vw;
+  }
+  .banner-titulo {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner-section {
+    background-size: 130%;
+    height: 36vw;
+  }
+  .banner-titulo {
+    font-size: 20px;
+  }
+}
+
+/* imagem */
+.imagem-section {
+  background-size: 100%;
+  height: 24vw;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* noticia */
+.noticia-section {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.noticia-text-title {
+  font-size: 24px;
+  font-family: 'Gotham';
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #2d7700;
+}
+
+.noticia-text-sub-title {
+  padding-top: 20px;
+  font-size: 12px;
+  font-family: 'Gotham';
+  color: #2d7700;
+  padding-bottom: 20px;
+}
+
+.noticia-text-text {
+  font-size: 13px;
+  font-family: 'Gotham';
+  font-weight: 100;
+  color: #2d7700;
+}
+
+/* veja */
+.veja-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f0f0f0;
+}
+
+.veja-titulo-col {
+  padding-bottom: 30px;
+}
+
+.veja-titulo {
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Gotham';
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #2d7700;
+}
+
+.veja-item-col {
+  background-color: #1ea100;
+  position: relative;
+  height: 430px;
+  margin-bottom: 100px;
+  color: #ffffff;
+}
+
+.veja-item-titulo {
+  padding-top: 40px;
+  font-size: 20px;
+  font-family: 'Gotham';
+  font-weight: 400;
+  padding-left: 30px;
+  padding-right: 15px;
+  height: 160px;
+}
+
+.veja-item-separator {
+  width: 50%;
+  height: 1px;
+  padding-top: 40px;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffffff;
+}
+
+.veja-item-text {
+  font-size: 14px;
+  padding-top: 25px;
+  font-weight: 100;
+  padding-left: 30px;
+  padding-right: 15px;
+  height: 100px;
+}
+
+.veja-item-mais {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 30px;
+  padding-right: 15px;
+}
+
+.veja-mais-botao-linha {
+  width: 100%;
+  padding-top: 15px;
+  height: 60px;
+}
+
+.veja-mais-botao {
+  width: fit-content;
+  font-size: 12px;
+  border: 1px;
+  border-color: #ffffff;
+  border-style: solid;
+  padding: 8px;
+  float: right;
+  margin-right: 20px;
+}
+
+.veja-mais-imagem {
+  clear: both;
+  margin-top: 30px;
+  width: 100%;
+  height: 36%;
+  background-size: 150%;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}

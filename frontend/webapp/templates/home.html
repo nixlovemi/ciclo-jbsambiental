@@ -1,0 +1,568 @@
+{% extends "page.html" %}
+{% load static %}
+
+{% block title %}Gest&atilde;o de Res&iacute;duos{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/home-v1.css' %}">
+{% endblock %}
+
+{% block script %}
+<script>
+  function chamada_hoverbg(index) {
+    return "linear-gradient(rgba(31, 161, 0, .3), rgba(31, 161, 0, .3)), url('/static/img/home/chamada" + index + ".png')";
+  }
+
+  function chamada_defaultbg(index) {
+    return "linear-gradient(rgba(31, 161, 0, .8), rgba(31, 161, 0, .8)), url('/static/img/home/chamada" + index + ".png')";
+  }
+
+  $('.chamada-1').hover(function() {
+    $(".chamada-1").css("background", chamada_hoverbg(1));
+  }, function() {
+    $(".chamada-1").css("background", chamada_defaultbg(1));
+  });
+
+  $('.chamada-2').hover(function() {
+    $(".chamada-2").css("background", chamada_hoverbg(2));
+  }, function() {
+    $(".chamada-2").css("background", chamada_defaultbg(2));
+  });
+
+  $('.chamada-3').hover(function() {
+    $(".chamada-3").css("background", chamada_hoverbg(3));
+  }, function() {
+    $(".chamada-3").css("background", chamada_defaultbg(3));
+  });
+
+  function fazemos_hoverbg(index) {
+    return "url('/static/img/home/produto" + index + ".png')";
+  }
+
+  function fazemos_defaultbg(index) {
+    return "linear-gradient(rgba(118, 229, 97, 0.6), rgba(118, 229, 97, 0.6)), url('/static/img/home/produto" + index + ".png')";
+  }
+
+  $('.fazemos-1').hover(function() {
+    $(".fazemos-1").css("background", fazemos_hoverbg(1));
+    $(".fazemos-1").css("background-size", "100%");
+  }, function() {
+    $(".fazemos-1").css("background", fazemos_defaultbg(1));
+    $(".fazemos-1").css("background-size", "100%");
+  });
+
+  $('.fazemos-2').hover(function() {
+    $(".fazemos-2").css("background", fazemos_hoverbg(2));
+    $(".fazemos-2").css("background-size", "100%");
+  }, function() {
+    $(".fazemos-2").css("background", fazemos_defaultbg(2));
+    $(".fazemos-2").css("background-size", "100%");
+  });
+
+  $('.fazemos-3').hover(function() {
+    $(".fazemos-3").css("background", fazemos_hoverbg(3));
+    $(".fazemos-3").css("background-size", "100%");
+  }, function() {
+    $(".fazemos-3").css("background", fazemos_defaultbg(3));
+    $(".fazemos-3").css("background-size", "100%");
+  });
+
+  $('.fazemos-4').hover(function() {
+    $(".fazemos-4").css("background", fazemos_hoverbg(4));
+    $(".fazemos-4").css("background-size", "100%");
+  }, function() {
+    $(".fazemos-4").css("background", fazemos_defaultbg(4));
+    $(".fazemos-4").css("background-size", "100%");
+  });
+
+  $('.fazemos-5').hover(function() {
+    $(".fazemos-5").css("background", fazemos_hoverbg(5));
+    $(".fazemos-5").css("background-size", "100%");
+  }, function() {
+    $(".fazemos-5").css("background", fazemos_defaultbg(5));
+    $(".fazemos-5").css("background-size", "100%");
+  });
+
+
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="banner-section">
+  <div class="banner-content">
+    <div class="container">
+      <div class="banner-titulo">
+        Gest&atilde;o de <br />
+        Res&iacute;duos S&oacute;lidos <br />
+        <strong>
+          Esse &eacute; o Nosso <br class="visible-gt-767" />
+          Neg&oacute;cio
+        </strong>
+      </div>
+      <div class="banner-sub-titulo-seta visible-gt-767">
+        <img src="{% static 'img/home/sub-titulo.png'%}" width="36px" height="36px" alt="" />
+      </div>
+      <div class="banner-sub-titulo">
+        A JBS Ambiental &eacute; uma empresa especializada <br class="visible-gt-767" />
+        em oferecer produtos e servi&ccedil;os sustent&aacute;veis de alta <br class="visible-gt-767" />
+        qualidade, desenvolvidos para solucionar quest&otilde;es <br class="visible-gt-767" />
+        relativas a res&iacute;duos gerados pelas ind&uacute;strias ou <br class="visible-gt-767" />
+        consumidores, garantindo maior efici&ecirc;ncia, valor <br class="visible-gt-767" />
+        e imagem para sua empresa.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="chamadas-section">
+  <div class="container">
+    <div class="chamadas-item-col chamada-0 col-md-3 col-sm-6">
+      <div class="chamadas-todos-detalhe visible-gt-767">
+        &nbsp;
+      </div>
+      <div class="chamadas-todos-texto">
+        Solu&ccedil;&otilde;es <br class="visible-gt-767" />
+        completas <br class="visible-gt-767" />
+        para <strong> gerenciar <br class="visible-gt-767" />
+        os res&iacute;duos <br class="visible-gt-767" />
+        em sua empresa</strong>
+      </div>
+      <div class="chamadas-todos-botao-linha">
+        <div class="chamadas-todos-botao">
+          <a href="/gestao-de-residuos">
+            Ver todos &nbsp;
+            <img src="{% static 'img/right-white.png' %}" width="9px" height="16px" alt="Link">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="chamadas-item-col chamada-1 col-md-3 col-sm-6">
+      <div class="chamadas-item-titulo">
+        Gest&atilde;o <br class="visible-gt-767" />
+        de Res&iacute;duos
+      </div>
+      <div class="chamadas-item-separator"></div>
+      <div class="chamadas-item-text">
+        Oferecemos solu&ccedil;&otilde;es em
+        gerenciamento e descarte
+        com foco no desenvolvimento
+        e crescimento da sua empresa.
+      </div>
+      <div class="chamadas-item-mais">
+        Saiba mais.
+        <a href="/gestao-de-residuos">
+          <img src="{% static 'img/plus.png' %}" width="16px" height="16px" alt="Plus">
+        </a>
+      </div>
+    </div>
+    <div class="chamadas-item-col chamada-2 col-md-3 col-sm-6">
+      <div class="chamadas-item-titulo">
+        Economia <br class="visible-gt-767" />
+        Circular
+      </div>
+      <div class="chamadas-item-separator"></div>
+      <div class="chamadas-item-text">
+        Obtemos vantagens
+        ambientais e economias
+        adicionais para sua empresa,
+        com a implementa&ccedil;&atilde;o do
+        conceito Ciclo Fechado no
+        gerenciamento de res&iacute;duos.
+      </div>
+      <div class="chamadas-item-mais">
+        Saiba mais.
+        <a href="/gestao-de-residuos">
+          <img src="{% static 'img/plus.png' %}" width="16px" height="16px" alt="Plus">
+        </a>
+      </div>
+    </div>
+    <div class="chamadas-item-col chamada-3 col-md-3 col-sm-6">
+      <div class="chamadas-item-titulo">
+        &nbsp; <br class="visible-gt-767" />
+        Rastreabilidade
+      </div>
+      <div class="chamadas-item-separator"></div>
+      <div class="chamadas-item-text">
+        Desenvolvemos produtos
+        e servi&ccedil;os com tecnologia
+        de ponta, rastreabilidade
+        de origem e destino com
+        certifica&ccedil;&atilde;o.
+      </div>
+      <div class="chamadas-item-mais">
+        Saiba mais.
+        <a href="/gestao-de-residuos">
+          <img src="{% static 'img/plus.png' %}" width="16px" height="16px" alt="Plus">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="fazemos-section">
+  <div class="container">
+    <div class="fazemos-titulo-col col-md-12 col-sm-12">
+      <div class="fazemos-titulo">
+        Conhe&ccedil;a o que <strong>fazemos</strong>
+      </div>
+    </div>
+    <div id="fazemosCarousel-large" class="carousel slide visible-gt-991" data-interval="2000" data-ride="carousel" data-pause="hover" data-wrap="true">
+      <!-- inner -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="row">
+            <div class="fazemos-item-col col-md-4 col-sm-4">
+              <div class="fazemos-box fazemos-box-1">
+                <a href="/produtos">
+                  <div class="fazemos-1">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      Paletes pl&aacute;sticos <strong>Retorn&aacute;veis</strong>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="fazemos-item-col fazemos-item-col-2 col-md-4 col-sm-4">
+              <div class="fazemos-box fazemos-box-2">
+                <a href="/produtos">
+                  <div class="fazemos-2">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      <strong>Bobinas</strong> e Folhas avulsas
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="fazemos-item-col fazemos-item-col-3 col-md-4 col-sm-4">
+              <div class="fazemos-box fazemos-box-3">
+                <a href="/produtos">
+                  <div class="fazemos-3">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      Sacos pl&aacute;sticos de <strong>fundo redondo</strong>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="row">
+            <div class="fazemos-item-col fazemos-item-col-4 col-md-4 col-sm-4">
+              <div class="fazemos-box fazemos-box-4">
+                <a href="/produtos">
+                  <div class="fazemos-4">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      Sacos <strong>especiais</strong>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="fazemos-item-col fazemos-item-col-5 col-md-4 col-sm-4">
+              <div class="fazemos-box fazemos-box-5">
+                <a href="/produtos">
+                  <div class="fazemos-5">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      Sacos para alimentos <strong>in natura</strong>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#fazemosCarousel-large" data-slide-to="0" class="active">
+        </li>
+        <li data-target="#fazemosCarousel-large" data-slide-to="1">
+        </li>
+      </ol>
+    </div>
+    <div id="fazemosCarousel-medium" class="carousel slide visible-lt-991-gt-767" data-interval="2000" data-ride="carousel" data-pause="hover" data-wrap="true">
+      <!-- inner -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="row">
+            <div class="fazemos-item-col fazemos-item-col-1 col-md-6 col-sm-6">
+              <div class="fazemos-box fazemos-box-1">
+                <a href="/produtos">
+                  <div class="fazemos-1">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      Paletes pl&aacute;sticos <strong>Retorn&aacute;veis</strong>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="fazemos-item-col fazemos-item-col-2 col-md-6 col-sm-6">
+              <div class="fazemos-box fazemos-box-2">
+                <a href="/produtos">
+                  <div class="fazemos-2">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      <strong>Bobinas</strong> e Folhas avulsas
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="row">
+            <div class="fazemos-item-col fazemos-item-col-3 col-md-6 col-sm-6">
+              <div class="fazemos-box fazemos-box-3">
+                <a href="/produtos">
+                  <div class="fazemos-3">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      Sacos pl&aacute;sticos de <strong>fundo redondo</strong>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="fazemos-item-col fazemos-item-col-4 col-md-6 col-sm-6">
+              <div class="fazemos-box fazemos-box-4">
+                <a href="/produtos">
+                  <div class="fazemos-4">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      Sacos <strong>especiais</strong>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="row">
+            <div class="fazemos-item-col fazemos-item-col-5 col-md-6 col-sm-6">
+              <div class="fazemos-box fazemos-box-5">
+                <a href="/produtos">
+                  <div class="fazemos-5">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      Sacos para alimentos <strong>in natura</strong>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#fazemosCarousel-medium" data-slide-to="0" class="active">
+        </li>
+        <li data-target="#fazemosCarousel-medium" data-slide-to="1">
+        </li>
+        <li data-target="#fazemosCarousel-medium" data-slide-to="2">
+        </li>
+      </ol>
+    </div>
+    <div id="fazemosCarousel-small" class="carousel slide visible-lt-767" data-interval="2000" data-ride="carousel" data-pause="hover" data-wrap="true">
+      <!-- inner -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="row">
+            <div class="fazemos-item-col fazemos-item-col-1 col-md-12 col-sm-12">
+              <div class="fazemos-box fazemos-box-1">
+                <a href="/produtos">
+                  <div class="fazemos-1">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      Paletes pl&aacute;sticos <strong>Retorn&aacute;veis</strong>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="row">
+            <div class="fazemos-item-col fazemos-item-col-2 col-md-12 col-sm-12">
+              <div class="fazemos-box fazemos-box-2">
+                <a href="/produtos">
+                  <div class="fazemos-2">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      <strong>Bobinas</strong> e Folhas avulsas
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="row">
+            <div class="fazemos-item-col fazemos-item-col-3 col-md-12 col-sm-12">
+              <div class="fazemos-box fazemos-box-3">
+                <a href="/produtos">
+                  <div class="fazemos-3">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      Sacos pl&aacute;sticos de <strong>fundo redondo</strong>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="row">
+            <div class="fazemos-item-col fazemos-item-col-4 col-md-12 col-sm-12">
+              <div class="fazemos-box fazemos-box-4">
+                <a href="/produtos">
+                  <div class="fazemos-4">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      Sacos <strong>especiais</strong>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="row">
+            <div class="fazemos-item-col fazemos-item-col-5 col-md-12 col-sm-12">
+              <div class="fazemos-box fazemos-box-5">
+                <a href="/produtos">
+                  <div class="fazemos-5">
+                    <div class="fazemos-item-box">
+                    </div>
+                    <div class="fazemos-item-label">
+                      Sacos para alimentos <strong>in natura</strong>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#fazemosCarousel-small" data-slide-to="0" class="active">
+        </li>
+        <li data-target="#fazemosCarousel-small" data-slide-to="1">
+        </li>
+        <li data-target="#fazemosCarousel-small" data-slide-to="2">
+        </li>
+        <li data-target="#fazemosCarousel-small" data-slide-to="3">
+        </li>
+        <li data-target="#fazemosCarousel-small" data-slide-to="4">
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="negocios-section">
+  <div class="container">
+    <div class="negocio-titulo-col negocio-titulo-1 col-md-3 col-sm-12">
+      <div class="negocio-titulo">
+        Neg&oacute;cios <br class="visible-gt-991" />
+        <strong>sustent&aacute;veis</strong> <br class="visible-gt-991" />
+        e respons&aacute;veis
+      </div>
+      <div class="negocio-texto">
+        Em um ano, uma &uacute;nica empresa
+        pode gerar toneladas de res&iacute;duos,
+        e na maioria dos casos esse material
+        &eacute; descartado de forma inadequada.
+        Muitas dessas empresas relatam
+        n&atilde;o ter o suporte e apoio para o
+        manuseio correto desses materiais.
+        Pensando nisso, a JBS Ambiental
+        oferece um &oacute;timo apoio para aqueles
+        que desejam possuir neg&oacute;cios
+        sustent&aacute;veis e respons&aacute;veis.
+      </div>
+    </div>
+    <div class="negocio-destaque-col">
+      <div class="negocio-destaque-1 visible-gt-991">&nbsp;</div>
+    </div>
+    <div class="negocio-imagem-col negocio-imagem-1 col-md-8 col-sm-12">
+      <img src="{% static 'img/home/negocio1.png' %}" width="100%" alt="Sustentável">
+    </div>
+    <div class="negocio-titulo-col negocio-titulo-2 col-md-3 col-sm-12">
+      <div class="negocio-titulo">
+       Res&iacute;duos <br class="visible-gt-991" />
+       <strong>gerenciados</strong>
+      </div>
+      <div class="negocio-texto">
+        Em 2019, a JBS Ambiental
+        gerenciou 23.904 toneladas
+        de res&iacute;duos s&oacute;lidos, entre
+        pl&aacute;sticos, metais, &oacute;leo,
+        papel&atilde;o e n&atilde;o recicl&aacute;veis.
+      </div>
+    </div>
+    <div class="negocio-imagem-col negocio-imagem-2 col-md-8 col-sm-12">
+      <img src="{% static 'img/home/negocio2.png' %}" width="100%" alt="Gerenciado">
+    </div>
+    <div class="negocio-destaque-col">
+      <div class="negocio-destaque-2 visible-gt-991">&nbsp;</div>
+    </div>
+    <div class="negocio-imagem-col negocio-imagem-3 col-md-8 col-sm-12 visible-gt-991">
+      <img src="{% static 'img/home/negocio3.png' %}" width="100%" alt="Planeta">
+    </div>
+    <div class="negocio-destaque-col">
+      <div class="negocio-destaque-3 visible-gt-991">&nbsp;</div>
+    </div>
+    <div class="negocio-titulo-col negocio-titulo-3 col-md-3 col-sm-12"">
+      <div class="negocio-titulo">
+       Contribuindo <br class="visible-gt-991" />
+       com o  <strong>planeta</strong>
+      </div>
+      <div class="negocio-texto">
+        Atrav&eacute;s da implementa&ccedil;&atilde;o de
+        processos, conscientiza&ccedil;&atilde;o
+        e solu&ccedil;&otilde;es inteligentes para
+        a reutiliza&ccedil;&atilde;o dos res&iacute;duos,
+        oferecemos solu&ccedil;&otilde;es de
+        gerenciamento, garantindo
+        a destina&ccedil;&atilde;o adequada
+        com menor impacto
+        ambiental e passivos legais.
+      </div>
+    </div>
+    <div class="negocio-imagem-col negocio-imagem-3 col-md-8 col-sm-8 visible-lt-991">
+      <img src="{% static 'img/home/negocio3.png' %}" width="100%" alt="Planeta">
+    </div>
+  </div>
+</div>
+
+{% endblock %}

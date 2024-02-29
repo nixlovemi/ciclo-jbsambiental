@@ -1,0 +1,46 @@
+upstream backend {
+  server {{ backend }};
+}
+
+# unsecure, proxies to backend
+server {
+  listen 8080; # cannot be 80, not running as root (mapped on container)
+  server_name {{ unsecured_host_headers|join(' ') }};
+
+  location /.well-known/acme-challenge/ {
+    root /var/www/certbot;
+  }
+
+  location = /ping {
+    empty_gif;
+  }
+
+  location /static/ {
+    root /var/www/frontend/webapp;
+  }
+
+  location /media/ {
+    root /var/www/frontend/webapp;
+  }
+
+  location / {
+    proxy_pass http://backend;
+  }
+}
+
+server {
+  listen 8080; # cannot be 80, not running as root (mapped on container)
+  server_name {{ secured_host_headers|join(' ') }};
+
+  location /.well-known/acme-challenge/ {
+    root /var/www/certbot;
+  }
+
+  location = /ping {
+    empty_gif;
+  }
+
+  location / {
+    return 301 https://{{ secure_host_header }}$request_uri;
+  }
+}

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# see https://certbot.eff.org/docs/using.html
+
+sleep 30s # make sure other containers are up and running
+
+while true; do
+
+  {% for secure_host_header in secure_host_headers %}
+  certbot certonly -n --webroot --agree-tos --webroot-path /var/www/certbot --email {{ email }} -d {{ secure_host_header }}
+  {% endfor %}
+
+  sleep 12h
+
+done

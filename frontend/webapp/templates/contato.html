@@ -1,0 +1,174 @@
+{% extends "page.html" %}
+{% load static %}
+
+{% block title %}Contato{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/contato-v1.css' %}">
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/contato-v1.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="banner-section">
+  <div class="banner-content">
+    <div class="container">
+      <div class="banner-titulo">
+        <strong>Contato</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mapa-section">
+</div>
+
+<!-- contato -->
+<div class="contato-section">
+  <div class="container">
+    <div class="contato-text col-md-4 col-sm-6 col-xs-12 visible-lt-767">
+      <div class="contato-text-title">
+        Fale <br/>
+        <strong>Conosco</strong>
+      </div>
+      <div class="contato-text-sub-title">
+        SAC
+      </div>
+      <div class="contato-text-text">
+        Serviço de Atendimento ao Cliente <br />
+        <br/>
+        Rod. BR 153, KM 179 - Zona Rural - Lins/SP <br />
+        <a href="mailto:sac.jbsambiental@jbs.com.br"><strong>sac.jbsambiental@jbs.com.br</strong></a> <br />
+        <strong>t.</strong> (14) 3511.2441
+      </div>
+      <div class="contato-text-sub-title">
+        COMERCIAL
+      </div>
+      <div class="contato-text-text">
+        <a href="mailto:comercial.jbsambiental@jbs.com.br"><strong>comercial.jbsambiental@jbs.com.br</strong></a> <br />
+        <strong>t.</strong> (14) 3511.2840
+      </div>
+      <div class="contato-text-sub-title">
+        SUPRIMENTOS
+      </div>
+      <div class="contato-text-text">
+        <strong>t.</strong> (14) 3511.2487
+      </div>
+      <br />
+      <br />
+    </div>
+    <div class="contato-form col-md-8 col-sm-6 col-xs-12">
+      <input type="text" id="nome" name="nome" placeholder="Nome Completo"></input> <br />
+      <input type="text" id="email" name="email" placeholder="E-mail"></input> <br />
+      <input type="text" id="telefone" name="telefone" placeholder="Telefone"></input> <br />
+      <textarea rows="6" id="mensagem" name="mensagem" placeholder="Mensagem - Não informar dados pessoais neste campo"></textarea>  <br />
+      <input type="checkbox" id="privacidade-check" name="privacidade-check" class="contato-form-checkbox">
+      </input>
+      <span class="contato-form-checkbox-text">Li e aceito a <a href="/politica-de-privacidade" class="contato-form-link" target="_blank" rel="noopener">Pol&iacute;tica de Privacidade</a> da JBS Ambiental</span>
+      <br/>
+      <div class="contato-enviar-linha">
+        <div class="contato-enviar" id="contato-enviar" style="cursor: pointer;">
+          <strong>Enviar</strong> &nbsp;
+          <img src="{% static 'img/right-green.png' %}" width="9px" height="16px" alt="Link">
+        </div>
+      </div>
+    </div>
+    <div class="contato-text col-md-4 col-sm-6 col-xs-12 visible-gt-767">
+      <div class="contato-text-title">
+        Fale <br/>
+        <strong>Conosco</strong>
+      </div>
+      <div class="contato-text-sub-title">
+        SAC
+      </div>
+      <div class="contato-text-text">
+        Serviço de Atendimento ao Cliente <br />
+        <br/>
+        Rod. BR 153, KM 179 - Zona Rural - Lins/SP <br />
+        <a href="mailto:sac.jbsambiental@jbs.com.br"><strong>sac.jbsambiental@jbs.com.br</strong></a> <br />
+        <strong>t.</strong> (14) 3511.2441
+      </div>
+      <div class="contato-text-sub-title">
+        COMERCIAL
+      </div>
+      <div class="contato-text-text">
+        <a href="mailto:comercial.jbsambiental@jbs.com.br"><strong>comercial.jbsambiental@jbs.com.br</strong></a> <br />
+        <strong>t.</strong> (14) 3511.2840
+      </div>
+      <div class="contato-text-sub-title">
+        SUPRIMENTOS
+      </div>
+      <div class="contato-text-text">
+        <strong>t.</strong> (14) 3511.2487
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visita-section">
+  <div class="container">
+    <div class="visita-titulo-col col-md-3 col-sm-12">
+      <div class="visita-titulo">
+        Visita <br class="visible-gt-991" />
+        <strong>Técnica</strong>
+      </div>
+      <div class="visita-texto">
+        Abrimos as portas da nossa empresa
+        para você, <strong>estudante</strong>, <strong>cooperativas</strong>,
+        <strong>empresas parceiras e colaborador</strong>
+        das unidades de negócio da JBS. <br />
+        <br />
+        A atividade visa a troca de
+        experiências e boas práticas sobre
+        <strong>Sustentabilidade</strong>, proporcionando
+        aos participantes uma formação
+        mais ampla em relação ao mercado
+        e aos serviços prestados pela <strong>JBS</strong>
+        <strong>Ambiental</strong>.
+      </div>
+    </div>
+    <div class="visita-destaque-col">
+      <div class="visita-destaque visible-gt-991">&nbsp;</div>
+    </div>
+    <div class="visita-imagem-col col-md-8 col-sm-12">
+      <img src="{% static 'img/contato/visita.png' %}" width="100%" alt="Visita Técnica">
+    </div>
+  </div>
+</div>
+
+<div class="time-section">
+  <div class="container">
+    <div class="time-imagem-col time-imagem col-md-8 col-sm-12 visible-gt-991">
+      <img src="{% static 'img/contato/time.png' %}" width="100%" alt="Time">
+    </div>
+    <div class="time-destaque-col">
+      <div class="time-destaque visible-gt-991">&nbsp;</div>
+    </div>
+    <div class="time-titulo-col col-md-3 col-sm-12"">
+      <div class="time-titulo">
+       Faça parte <br class="visible-gt-991" />
+       do time <strong>JBS</strong>
+      </div>
+      <div class="time-texto">
+        Envie seu currículo para o e-mail:
+        <a href="mailto:recrutamento.jbsambiental@jbs.com.br"><strong>recrutamento.jbsambiental@jbs.com.br</strong></a>
+        e assim que tivermos novas
+        oportunidades entraremos
+        em contato com você!
+        <br />
+        <br />
+      </div>
+      <div class="time-titulo">
+        Boa <strong>Sorte!</strong>
+       </div>
+    </div>
+    <div class="time-imagem-col time-imagem col-md-8 col-sm-8 visible-lt-991">
+      <img src="{% static 'img/contato/time.png' %}" width="100%" alt="Time">
+    </div>
+  </div>
+</div>
+
+{% endblock %}

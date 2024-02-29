@@ -1,0 +1,27 @@
+{{ docker_containers_dir }}/frontend_http/log/access.log {
+    rotate 10
+    size 10M
+    missingok
+    daily
+    compress
+    delaycompress
+    notifempty
+    create 0640 frontend frontend
+    postrotate
+        /bin/kill -USR1 $(ps -ef | grep "nginx" | grep "master" | grep -v "grep" | awk '{print $2}' 2>/dev/null) 2>/dev/null
+    endscript
+}
+
+{{ docker_containers_dir }}/frontend_http/log/error.log {
+    rotate 10
+    size 10M
+    missingok
+    daily
+    compress
+    delaycompress
+    notifempty
+    create 0640 frontend frontend
+    postrotate
+        /bin/kill -USR1 $(ps -ef | grep "nginx" | grep "master" | grep -v "grep" | awk '{print $2}' 2>/dev/null) 2>/dev/null
+    endscript
+}
