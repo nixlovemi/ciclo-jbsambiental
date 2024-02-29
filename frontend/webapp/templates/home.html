@@ -83,7 +83,25 @@
     $(".fazemos-5").css("background-size", "100%");
   });
 
+  fncGetVideoHome = function() {
+    var video = document.getElementById("myVideoPlayer");
+    return video;
+  }
 
+  $(document).ready(function() {
+      $('#modal-video-home').modal({});
+      $("#modal-video-home").on("hidden.bs.modal", function (e) {
+          var video = fncGetVideoHome();
+          video.pause();
+          video.currentTime = 0;
+      });
+
+      $("#modal-video-home").on("shown.bs.modal", function (e) {
+          var video = fncGetVideoHome();
+          video.currentTime = 0;
+          video.play();
+      });
+  });
 </script>
 {% endblock %}
 
@@ -104,7 +122,7 @@
         <img src="{% static 'img/home/sub-titulo.png'%}" width="36px" height="36px" alt="" />
       </div>
       <div class="banner-sub-titulo">
-        A JBS Ambiental &eacute; uma empresa especializada <br class="visible-gt-767" />
+        A Ambiental &eacute; uma empresa especializada <br class="visible-gt-767" />
         em oferecer produtos e servi&ccedil;os sustent&aacute;veis de alta <br class="visible-gt-767" />
         qualidade, desenvolvidos para solucionar quest&otilde;es <br class="visible-gt-767" />
         relativas a res&iacute;duos gerados pelas ind&uacute;strias ou <br class="visible-gt-767" />
@@ -505,7 +523,7 @@
         Muitas dessas empresas relatam
         n&atilde;o ter o suporte e apoio para o
         manuseio correto desses materiais.
-        Pensando nisso, a JBS Ambiental
+        Pensando nisso, a Ambiental
         oferece um &oacute;timo apoio para aqueles
         que desejam possuir neg&oacute;cios
         sustent&aacute;veis e respons&aacute;veis.
@@ -523,7 +541,7 @@
        <strong>gerenciados</strong>
       </div>
       <div class="negocio-texto">
-        Em 2019, a JBS Ambiental
+        Em 2019, a Ambiental
         gerenciou 23.904 toneladas
         de res&iacute;duos s&oacute;lidos, entre
         pl&aacute;sticos, metais, &oacute;leo,
@@ -562,6 +580,27 @@
     <div class="negocio-imagem-col negocio-imagem-3 col-md-8 col-sm-8 visible-lt-991">
       <img src="{% static 'img/home/negocio3.png' %}" width="100%" alt="Planeta">
     </div>
+  </div>
+</div>
+
+<!-- Video Modal -->
+<div id="modal-video-home" class="modal fade rounded-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+          <button class="close-button" data-dismiss="modal"></button>
+
+          <div class="modal-body pb-4">
+              <div class="embed-responsive embed-responsive-16by9">
+                  <video id="myVideoPlayer" controls="true" class="embed-responsive-item" autoplay="" playsinline="" muted="false">
+                      <source src="{% static 'img/home/home-video.mp4' %}" type="video/mp4" />
+                  </video>
+              </div>                        
+          </div>
+
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          </div>
+      </div>
   </div>
 </div>
 

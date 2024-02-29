@@ -110,14 +110,14 @@ a.ancora {
 }
 
 .logo-box {
-  padding-top: 18px;
+  padding-top: 9px;
   width: 150px;
   float: left;
 }
 
 .logo-box>img {
-  width: 173px;
-  height: 46px;
+  width: 143px;
+  height: 58px;
 }
 
 .menu {
@@ -157,7 +157,7 @@ a.ancora {
   .navbar-header {
     background-color: #ffffff;
     background-image: url("../img/logo-mobile.png");
-    background-size: 30%;
+    background-size: 24%;
     background-repeat: no-repeat;
     background-position: center;
     height: 90px;
@@ -284,11 +284,11 @@ a.ancora {
 @media (max-width: 991px) {
   .logo-box {
     width: 140px;
-    padding-top: 24px;
+    padding-top: 12px;
   }
   .logo-box>img {
     width: 135px;
-    height: 36px;
+    height: auto;
   }
   .navbar .navbar-nav>li>a {
     padding-left: 11px;

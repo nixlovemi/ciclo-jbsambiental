@@ -366,6 +366,62 @@
   z-index: 1000;
 }
 
+.rounded-modal .modal-body img,
+.rounded-modal .modal-content  {
+    border-radius: 25px !important; 
+}
+.rounded-modal .modal-footer {
+    display: none;
+}
+.rounded-modal .close-button {
+    position: relative;
+    left: 98%;
+    top: -10px;
+}
+.close-button {
+    border-radius: 50%;
+    padding: 0.5em;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #99bb39;
+    background-color: #99bb39;
+    color: #FFF;
+    position: relative;
+}
+.close-button:hover {
+    border: 2px solid #99bb39;
+    background-color: #acd932;
+    color: #ffffff;
+}
+.close-button::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #FFF;
+    width: 2px;
+    left: 12px;
+    top: 5px;
+    bottom: 5px;
+    transform: rotate(45deg);
+}
+.close-button::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #FFF;
+    height: 2px;
+    top:12px;
+    left: 5px;
+    right: 5px;
+    transform: rotate(45deg);
+}
+
+@media (max-width: 575px) {
+  .rounded-modal .close-button {
+      left: 95%;
+  }
+}
+
 @media (max-width: 1199px) {
   .negocio-titulo {
     font-size: 20px;

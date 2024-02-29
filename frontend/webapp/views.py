@@ -88,7 +88,7 @@ def mail(request):
     logging.debug(message)
 
     status = send_mail(
-        subject='[JBS Ambiental] Contact Form',
+        subject='[Ambiental] Contact Form',
         from_email=config.EMAIL_FROM,
         recipient_list=[config.EMAIL_TO],
         message=message,
